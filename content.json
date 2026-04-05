@@ -1,0 +1,26 @@
+{
+  "title": "My Blogs",
+  "items": [
+    {
+      "type": "folder",
+      "name": "AI & ML",
+      "children": [
+        { "type": "file", "name": "Intro to LLMs", "path": "posts/ai-ml/intro-to-llms.md" },
+        { "type": "file", "name": "Fine Tuning Guide", "path": "posts/ai-ml/fine-tuning.md" }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Python",
+      "children": [
+        { "type": "file", "name": "Async Patterns", "path": "posts/python/async-patterns.md" },
+        { "type": "file", "name": "FastAPI Tips", "path": "posts/python/fastapi-tips.md" }
+      ]
+    },
+    {
+      "type": "file",
+      "name": "About",
+      "path": "posts/about.md"
+    }
+  ]
+}
