@@ -4,6 +4,12 @@
 
 **Books covered:** 01_Beginner · 02_Core_ML_Practical · 03_ML_Theory_Math · 04_Deep_Learning · 05_NLP_and_LLMs · 06_Production_MLOps_AI_Engineering · 07_AI_Foundations
 
+1. AI Agent evaluation
+2. Langraph
+3. LLMs
+4. LLMOps
+5. Openclaw internal working
+6. Claude Skills & Code
 ---
 
 ## Phase 1 — Mathematics & Prerequisites
