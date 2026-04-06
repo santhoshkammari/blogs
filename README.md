@@ -23,6 +23,128 @@
 
 ---
 
+## Math Foundations — Interview & Production Level
+
+> Practical math for ML/DL/AI interviews and production. Not academic depth — just what you actually need to explain, debug, and build.
+
+### Linear Algebra (Interview Must-Knows)
+
+- [ ] **Vectors & Matrices** — shapes, broadcasting, reshape, transpose
+- [ ] **Matrix Multiplication** — dot product, element-wise, dimensions rule
+- [ ] **Norms** — L1 (Manhattan), L2 (Euclidean) — used in regularization, distance
+- [ ] **Eigenvalues & Eigenvectors** — what they mean, why PCA uses them, covariance matrix decomposition
+- [ ] **SVD — Singular Value Decomposition** — low-rank approximation, relation to PCA, used in embeddings
+- [ ] **Matrix Rank & Linear Independence** — full rank vs rank-deficient, what it means for solutions
+- [ ] **Positive Definite Matrices** — role in convex optimization, Hessian interpretation
+- [ ] **Inverse & Pseudoinverse** — when inverse exists, Moore-Penrose for least squares
+- [ ] **Orthogonality** — orthonormal bases, QR decomposition concept
+- [ ] **Attention as Matrix Ops** — QKᵀV as dot-product matrix multiplication
+- [ ] **Vector Spaces & Subspaces** — span, basis, dimension
+- [ ] **Inner Products** — dot product generalized, angle between vectors
+- [ ] **Orthogonal Projection** — projecting onto subspace, used in OLS
+- [ ] **Linear Transformations** — how matrices map vectors between spaces
+- [ ] **Determinant** — geometric meaning (volume scaling), zero det = singular
+- [ ] **Matrix Decompositions** — LU (solving systems), QR (orthogonalization), Cholesky (symmetric PD matrices)
+
+### Calculus & Optimization (Interview Must-Knows)
+
+- [ ] **Derivatives & Partial Derivatives** — slope, rate of change per parameter
+- [ ] **Chain Rule** — foundation of backpropagation
+- [ ] **Gradients** — vector of partial derivatives, direction of steepest ascent
+- [ ] **Gradient Descent** — batch, SGD, mini-batch — trade-offs
+- [ ] **Learning Rate** — too high (diverge), too low (slow), schedulers
+- [ ] **Backpropagation** — forward pass → loss → backward pass via chain rule → weight update
+- [ ] **Vanishing Gradients** — causes (deep nets, sigmoid/tanh), fixes (ReLU, BatchNorm, residual connections)
+- [ ] **Exploding Gradients** — causes, fixes (gradient clipping)
+- [ ] **Optimizers** — SGD, Momentum, RMSProp, Adam — how they differ, when to use
+- [ ] **Convexity** — convex vs non-convex loss, local vs global minima
+- [ ] **Jacobian & Hessian** — Jacobian for vector-valued functions, Hessian for curvature/second-order
+- [ ] **Taylor Series** — approximating functions locally, used in second-order optimization
+- [ ] **Learning Rate Schedules** — step decay, exponential decay, cosine annealing, warmup
+- [ ] **Gradient Clipping** — prevents exploding gradients, clips by value or norm
+- [ ] **KKT Conditions** — constrained optimization, used in SVM derivation
+- [ ] **Directional Derivative** — gradient in an arbitrary direction
+
+### Probability & Statistics (Interview Must-Knows)
+
+- [ ] **Probability Rules** — addition, multiplication, conditional probability
+- [ ] **Bayes' Theorem** — P(A|B) = P(B|A)P(A)/P(B), used in Naive Bayes, MAP
+- [ ] **Common Distributions** — Normal, Bernoulli, Binomial, Poisson, Uniform, Exponential
+- [ ] **Expectation, Variance, Covariance** — definitions, properties, covariance matrix
+- [ ] **MLE — Maximum Likelihood Estimation** — log-likelihood, how models are trained
+- [ ] **MAP — Maximum A Posteriori** — MLE + prior = regularization
+- [ ] **Cross-Entropy & Log Loss** — connection to MLE, used as classification loss
+- [ ] **KL Divergence** — measure of distribution difference, used in VAEs, RLHF, distillation
+- [ ] **Central Limit Theorem** — why we assume normal distributions in practice
+- [ ] **Bias-Variance Tradeoff** — underfitting vs overfitting, decomposition of error
+- [ ] **Hypothesis Testing** — p-value, null hypothesis, Type I/II errors — for A/B testing
+- [ ] **Confidence Intervals** — what they mean, how to interpret
+- [ ] **Correlation vs Causation** — Pearson, Spearman, when correlation misleads
+- [ ] **Combinatorics & Counting** — permutations, combinations — for probability problems
+- [ ] **Sample Space & Events** — sample space, events, probability axioms
+- [ ] **Discrete vs Continuous Distributions** — PMF, PDF, CDF — what each means
+- [ ] **Exponential Family** — Gaussian, Bernoulli, Poisson as exponential family — used in GLMs
+- [ ] **A/B Testing** — hypothesis test for product experiments, stat significance, power
+- [ ] **Multicollinearity** — correlated features in regression, VIF, what it breaks
+- [ ] **Sampling Distributions** — distribution of sample mean, bootstrapping
+- [ ] **Bayesian Statistics** — prior, likelihood, posterior — full Bayesian inference
+- [ ] **Geometric Distribution** — waiting for first success — Poisson process connection
+- [ ] **Expected Value Tricks** — linearity of expectation, useful in interview probability puzzles
+
+### Information Theory (Interview Must-Knows)
+
+- [ ] **Entropy** — measure of uncertainty, H = -Σ p log p
+- [ ] **Cross-Entropy** — used as loss function in classification
+- [ ] **KL Divergence** — asymmetric, D_KL(P‖Q), used in training generative models
+- [ ] **Mutual Information** — shared information between variables, used in feature selection
+
+### ML Concepts (Interview Must-Knows — from Cheatsheets)
+
+- [ ] **Imbalanced Data** — class imbalance, oversampling (SMOTE), undersampling, class weights, precision-recall over accuracy
+- [ ] **Regularization** — L1 (Lasso, sparse), L2 (Ridge, weight decay), Dropout, early stopping, cross-validation
+- [ ] **Ensemble Methods** — Bagging (Random Forest), Boosting (AdaBoost, XGBoost), Stacking — when each wins
+- [ ] **Dimensionality Reduction** — PCA (unsupervised), LDA (supervised), Factor Analysis, t-SNE, UMAP
+- [ ] **Autoencoders** — encoder-decoder, bottleneck representation, VAE (latent space sampling)
+- [ ] **Famous DNN Architectures** — AlexNet, VGGNet, ResNet (skip connections), Inception — what each introduced
+- [ ] **CNN Concepts** — convolution, pooling, stride, padding, receptive field, feature maps
+- [ ] **Anomaly Detection** — isolation forest, one-class SVM, autoencoders for anomaly, statistical methods
+- [ ] **Time Series** — stationarity, ARIMA, seasonal decomposition, lag features, train/test split for time series
+- [ ] **Recommender Systems** — collaborative filtering, matrix factorization (SVD), content-based, cold start problem
+- [ ] **Reinforcement Learning Basics** — agent, environment, reward, policy, Q-learning concept
+- [ ] **Batch Normalization** — normalizes activations per batch, reduces internal covariate shift, helps with vanishing gradients
+- [ ] **Residual Networks (ResNets)** — skip connections solve vanishing gradient in very deep nets
+- [ ] **Attention & Transformers** — self-attention, multi-head attention, positional encoding, BERT/GPT concept
+
+---
+
+### Resources — Math for ML/DL/AI
+
+#### Books
+| Book | Focus | Notes |
+|------|-------|-------|
+| [Mathematics for Machine Learning](https://mml-book.github.io/) — Deisenroth, Faisal, Ong | Linear algebra, calculus, probability, stats | Free PDF, ML-focused examples |
+| [Introduction to ML Interviews](https://huyenchip.com/ml-interviews-book/) — Chip Huyen | Math + ML concepts as interview Q&A | Free online |
+| Cracking the ML Interview — Nitin Suri | Stats + algorithms, interview-focused | Concise |
+
+#### Cheatsheets & Blogs
+| Resource | What it covers |
+|----------|---------------|
+| [Data Science Cheatsheet (5-page)](https://github.com/aaronwangy/Data-Science-Cheatsheet) | Condensed ML math reference |
+| [Stats & Probability Cheatsheet — TDS](https://towardsdatascience.com/a-comprehensive-statistics-and-probability-cheat-sheet-for-data-science-interviews-547b201345b9/) | Stats for interviews |
+| [Cheat Sheets for ML Interview — Medium](https://medium.com/swlh/cheat-sheets-for-machine-learning-interview-topics-51c2bc2bab4f) | Visual cheatsheets per topic |
+| [Linear Algebra Interview Qs — Devinterview](https://devinterview.io/questions/machine-learning-and-data-science/linear-algebra-interview-questions/) | 70 LA interview questions |
+| [40 Prob/Stats Qs — Nick Singh](https://www.nicksingh.com/posts/40-probability-statistics-data-science-interview-questions-asked-by-fang-wall-street) | FAANG-style probability questions |
+| [Backpropagation & Calculus — TensorTonic](https://www.tensortonic.com/ml-math/calculus/backpropagation) | Calculus for deep learning |
+| [deeplearning.ai Math Specialization](https://www.deeplearning.ai/courses/mathematics-for-machine-learning-and-data-science-specialization/) | Video course, ML-focused |
+| [ML Interview Checklist](https://rpatrik96.github.io/posts/2023/01/ml-interview-checklist/) | Comprehensive interview prep checklist |
+| [MLStack.Cafe — Linear Algebra Qs](https://www.mlstack.cafe/blog/linear-algebra-interview-questions) | Curated LA interview Q&A |
+| [Aqeel Anwar Cheatsheet PDFs](https://cheatsheets.aqeel-anwar.com) | Bias-variance, PCA, CNN, regularization, ensembles |
+| [InterviewBit — Probability Qs](https://www.interviewbit.com/probability-interview-questions/) | Probability interview Q&A |
+| [Gradient Descent Interview Qs — Devinterview](https://github.com/Devinterview-io/gradient-descent-interview-questions) | GD variants, optimizers, convergence |
+| [ML Interview Checklist (math+DL)](https://rpatrik96.github.io/posts/2023/01/ml-interview-checklist/) | Full checklist: LA, prob, calculus, DL |
+
+---
+
 ## Phase 2 — Machine Learning
 
 ### 2.1 Core Supervised Learning
