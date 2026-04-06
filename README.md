@@ -2999,3 +2999,957 @@
 - **Conclusion**
 
 ### Index
+
+## ML with PyTorch and Scikit-Learn — Sebastian Raschka, Yuxi (Hayden) Liu & Vahid Mirjalili (Chapter Map)
+
+> **Authors:** Sebastian Raschka (Asst. Professor of Statistics, Univ. of Wisconsin-Madison), Yuxi (Hayden) Liu, Vahid Mirjalili · **Publisher:** Packt Publishing, 2022 · **Pages:** 771
+
+### Preface
+
+### Chapter 1 — Giving Computers the Ability to Learn from Data
+- Building intelligent machines to transform data into knowledge
+- The three different types of machine learning
+  - Supervised learning: classification and regression
+  - Unsupervised learning: clustering and dimensionality reduction
+  - Reinforcement learning
+- Introduction to basic terminology and notations
+- A roadmap for building machine learning systems
+- Using Python for machine learning
+
+### Chapter 2 — Training Simple Machine Learning Algorithms for Classification
+- Artificial neurons – early history of machine learning
+  - Formal definition of an artificial neuron
+  - The perceptron learning rule
+- Implementing a perceptron learning algorithm in Python
+- Adaptive linear neurons and convergence of learning
+  - Minimizing loss functions with gradient descent
+  - Implementing Adaline in Python
+  - Improving gradient descent through feature scaling
+  - Large-scale ML and stochastic gradient descent
+
+### Chapter 3 — A Tour of Machine Learning Classifiers Using Scikit-Learn
+- Choosing a classification algorithm
+- First steps with scikit-learn – training a perceptron
+- Modeling class probabilities via logistic regression
+  - Logistic regression and conditional probabilities
+  - Learning weights via logistic loss function
+  - Training a logistic regression model with scikit-learn
+  - Tackling overfitting via regularization
+- Maximum margin classification with SVMs
+  - Maximum margin intuition
+  - Kernel SVM for nonlinear problems
+- Decision tree learning
+  - Maximizing information gain
+  - Random forests
+- K-nearest neighbors
+
+### Chapter 4 — Building Good Training Datasets – Data Preprocessing
+- Dealing with missing data
+  - Identifying, eliminating, imputing missing values
+  - scikit-learn estimator API
+- Handling categorical data
+  - Ordinal features, class labels, one-hot encoding
+- Partitioning datasets into training and test sets
+- Bringing features onto the same scale
+- Selecting meaningful features
+  - L1 and L2 regularization
+  - Sequential feature selection algorithms
+  - Feature importance with random forests
+
+### Chapter 5 — Compressing Data via Dimensionality Reduction
+- Unsupervised dimensionality reduction via PCA
+  - Extracting principal components step by step
+  - Total and explained variance
+  - PCA in scikit-learn
+  - Assessing feature contributions
+- Supervised data compression via LDA
+  - PCA versus LDA
+  - Computing scatter matrices
+  - LDA via scikit-learn
+- Nonlinear dimensionality reduction and visualization
+  - t-SNE (t-distributed stochastic neighbor embedding)
+
+### Chapter 6 — Learning Best Practices for Model Evaluation and Hyperparameter Tuning
+- Streamlining workflows with pipelines
+- Using k-fold cross-validation to assess model performance
+  - Holdout method, k-fold cross-validation
+- Debugging algorithms with learning and validation curves
+  - Diagnosing bias and variance problems
+- Fine-tuning ML models via grid search
+  - Grid search, randomized search, successive halving
+  - Nested cross-validation
+- Performance evaluation metrics
+  - Confusion matrix, precision/recall, ROC curves
+  - Multiclass scoring, class imbalance
+
+### Chapter 7 — Combining Different Models for Ensemble Learning
+- Learning with ensembles
+- Combining classifiers via majority vote
+- Bagging – bootstrap aggregating
+  - Applying bagging with scikit-learn
+- Adaptive boosting (AdaBoost)
+- Gradient boosting – training based on loss gradients
+  - AdaBoost vs gradient boosting
+  - XGBoost
+
+### Chapter 8 — Applying Machine Learning to Sentiment Analysis
+- Preparing the IMDb movie review data
+- Introducing the bag-of-words model
+  - Transforming words into feature vectors
+  - TF-IDF
+  - Cleaning and tokenizing text data
+- Training a logistic regression model for document classification
+- Out-of-core learning with online algorithms
+- Topic modeling with LDA (Latent Dirichlet Allocation)
+
+### Chapter 9 — Predicting Continuous Target Variables with Regression Analysis
+- Introducing linear regression (simple and multiple)
+- Exploring the Ames Housing dataset
+- Implementing OLS linear regression
+  - Gradient descent for regression parameters
+  - RANSAC for robust regression
+- Evaluating performance of linear regression models
+- Regularized methods for regression
+- Polynomial regression
+- Dealing with nonlinear relationships using random forests
+  - Decision tree regression, random forest regression
+
+### Chapter 10 — Working with Unlabeled Data – Clustering Analysis
+- Grouping objects by similarity using k-means
+  - k-means++, hard vs soft clustering
+  - Elbow method, silhouette plots
+- Organizing clusters as a hierarchical tree
+  - Agglomerative clustering, dendrograms, heat maps
+- Locating regions of high density via DBSCAN
+
+### Chapter 11 — Implementing a Multilayer Artificial Neural Network from Scratch
+- Modeling complex functions with ANNs
+  - Single-layer neural network recap
+  - Multilayer neural network architecture
+  - Forward propagation
+- Classifying handwritten digits (MNIST)
+  - Implementing a multilayer perceptron
+  - Neural network training loop
+- Training an ANN
+  - Computing the loss function
+  - Backpropagation
+  - Convergence in neural networks
+
+### Chapter 12 — Parallelizing Neural Network Training with PyTorch
+- PyTorch and training performance
+  - What is PyTorch and how to learn it
+- First steps with PyTorch
+  - Creating and manipulating tensors
+  - Mathematical operations on tensors
+  - Split, stack, concatenate tensors
+- Building input pipelines in PyTorch
+  - DataLoader from tensors, joint datasets
+  - Shuffle, batch, repeat
+  - Creating datasets from local files
+  - torchvision.datasets
+- Building an NN model in PyTorch
+  - torch.nn module
+  - Linear regression model
+  - Model training with torch.nn and torch.optim
+  - Multilayer perceptron for Iris classification
+  - Saving and reloading trained models
+- Choosing activation functions
+  - Logistic, softmax, tanh, ReLU
+
+### Chapter 13 — Going Deeper – The Mechanics of PyTorch
+- PyTorch's computation graphs
+  - Understanding and creating computation graphs
+- PyTorch tensor objects for model parameters
+- Computing gradients via automatic differentiation
+  - Adversarial examples
+- Simplifying architectures via torch.nn
+  - nn.Sequential, loss functions, XOR problem
+  - nn.Module for flexible model building
+  - Writing custom layers
+- Project 1 – predicting fuel efficiency of a car
+- Project 2 – classifying MNIST handwritten digits
+- PyTorch Lightning introduction
+  - Setting up model, data loaders, Trainer
+  - Evaluating with TensorBoard
+
+### Chapter 14 — Classifying Images with Deep Convolutional Neural Networks
+- Building blocks of CNNs
+  - Feature hierarchies
+  - Discrete convolutions (1D and 2D)
+  - Padding, convolution output size
+  - Subsampling / pooling layers
+- Implementing a CNN
+  - Multiple input/color channels
+  - L2 regularization and dropout
+  - Loss functions for classification
+- Implementing a deep CNN using PyTorch
+  - Multilayer CNN architecture
+  - torch.nn CNN layers configuration
+- Smile classification from face images (CelebA dataset)
+  - Image transformation and data augmentation
+
+### Chapter 15 — Modeling Sequential Data Using Recurrent Neural Networks
+- Introducing sequential data
+  - Sequence modeling categories
+- RNNs for modeling sequences
+  - Dataflow in RNNs, computing activations
+  - Hidden recurrence vs output recurrence
+  - Challenges of long-range interactions
+  - Long short-term memory (LSTM) cells
+- Implementing RNNs for sequence modeling in PyTorch
+  - Project 1 – IMDb sentiment analysis (embedding layers, RNN model)
+  - Project 2 – character-level language modeling
+
+### Chapter 16 — Transformers – Improving NLP with Attention Mechanisms
+- Adding attention mechanism to RNNs
+  - Original attention mechanism
+  - Bidirectional RNN inputs
+  - Computing attention weights
+- Self-attention mechanism
+  - Basic self-attention
+  - Scaled dot-product attention
+- Original transformer architecture
+  - Multi-head attention
+  - Decoder and masked multi-head attention
+  - Positional encodings and layer normalization
+- Building large-scale language models with unlabeled data
+  - Pre-training and fine-tuning
+  - GPT, GPT-2 text generation
+  - BERT bidirectional pre-training
+  - BART
+- Fine-tuning a BERT model in PyTorch
+  - IMDb dataset, tokenization, Trainer API
+
+### Chapter 17 — Generative Adversarial Networks for Synthesizing New Data
+- Introducing GANs
+  - Autoencoders recap
+  - Generative models for synthesizing data
+  - GAN loss functions (generator and discriminator)
+- Implementing a GAN from scratch (Google Colab)
+- Improving quality with DCGAN and WGAN
+  - Transposed convolution
+  - Batch normalization
+  - Wasserstein distance (EM distance)
+  - Gradient penalty, WGAN-GP
+  - Mode collapse
+- Other GAN applications
+
+### Chapter 18 — Graph Neural Networks for Capturing Dependencies in Graph Structured Data
+- Introduction to graph data
+  - Undirected graphs, directed graphs, labeled graphs
+  - Representing molecules as graphs
+- Understanding graph convolutions
+  - Motivation and implementing basic graph convolutions
+- Implementing a GNN in PyTorch from scratch
+  - NodeNetwork model
+  - Graph convolution layer, global pooling
+  - DataLoader and predictions
+- Implementing a GNN using PyTorch Geometric
+- Other GNN layers and recent developments
+  - Spectral graph convolutions, pooling, normalization
+
+### Chapter 19 — Reinforcement Learning for Decision Making in Complex Environments
+- Introduction – learning from experience
+  - RL overview and agent-environment interface
+- Theoretical foundations of RL
+  - Markov decision processes (MDPs)
+  - Return, policy, and value functions
+  - Bellman equation and dynamic programming
+- RL algorithms
+  - Dynamic programming: policy evaluation, policy iteration, value iteration
+  - Monte Carlo methods: state-value, action-value, MC control
+  - Temporal difference learning: TD prediction, SARSA, Q-learning
+- Implementing RL with OpenAI Gym
+  - Grid world example and Q-learning solution
+- Deep Q-learning (DQN)
+  - Replay memory
+  - Target values for loss computation
+  - Implementing DQN algorithm
+
+## ML Systems Textbook — Harvard SEAS / Edge Impulse (Chapter Map)
+
+> A comprehensive open textbook on machine learning systems engineering, covering the full spectrum from deep learning fundamentals and model optimization to deployment paradigms, hardware acceleration, MLOps, security, and responsible AI. Includes embedded/TinyML lab exercises for Nicla Vision, XIAO ESP32S3, and Raspberry Pi platforms.
+
+### Introduction
+- **Purpose**
+- **The Engineering Revolution in Artificial Intelligence**
+- **From Artificial Intelligence Vision to Machine Learning Practice**
+- **Defining ML Systems**
+- **How ML Systems Differ from Traditional Software**
+- **The Bitter Lesson: Why Systems Engineering Matters**
+- **Historical Evolution of AI Paradigms**
+  - Symbolic AI Era · Expert Systems Era · Statistical Learning Era · Shallow Learning Era · Deep Learning Era
+- **Understanding ML System Lifecycle and Deployment**
+  - The ML Development Lifecycle · The Deployment Spectrum · How Deployment Shapes the Lifecycle
+- **Case Studies in Real-World ML Systems**
+  - Case Study: Autonomous Vehicles · Contrasting Deployment Scenarios
+- **Core Engineering Challenges in ML Systems**
+- **Defining AI Engineering**
+
+### Chapter 1 — ML Systems
+- **Deployment Paradigm Framework**
+- **The Deployment Spectrum**
+- **Cloud ML: Maximizing Computational Power**
+- **Edge ML: Reducing Latency and Privacy Risk**
+- **Mobile ML: Personal and Offline Intelligence**
+- **Tiny ML: Ubiquitous Sensing at Scale**
+- **Hybrid Architectures: Combining Paradigms**
+- **Shared Principles Across Deployment Paradigms**
+- **Comparative Analysis and Selection Framework**
+- **Decision Framework for Deployment Selection**
+- **Fallacies and Pitfalls**
+
+### Chapter 2 — DL Primer
+- **Deep Learning Systems Engineering Foundation**
+- **Evolution of ML Paradigms**
+- **From Biology to Silicon**
+- **Neural Network Fundamentals**
+- **Learning Process**
+- **Inference Pipeline**
+- **Case Study: USPS Digit Recognition**
+- **Deep Learning and the AI Triangle**
+- **Fallacies and Pitfalls**
+
+### Chapter 3 — DNN Architectures
+- **Architectural Principles and Engineering Trade-offs**
+- **Multi-Layer Perceptrons: Dense Pattern Processing**
+- **CNNs: Spatial Pattern Processing**
+- **RNNs: Sequential Pattern Processing**
+- **Attention Mechanisms: Dynamic Pattern Processing**
+- **Architectural Building Blocks**
+- **System-Level Building Blocks**
+- **Architecture Selection Framework**
+- **Unified Framework: Inductive Biases**
+- **Fallacies and Pitfalls**
+
+### Chapter 4 — AI Workflow
+- **Systematic Framework for ML Development**
+- **Understanding the ML Lifecycle**
+- **ML vs Traditional Software Development**
+- **Six Core Lifecycle Stages**
+  - Problem Definition · Data Collection & Preparation · Model Development & Training · Deployment & Integration · Monitoring & Maintenance
+- **Integrating Systems Thinking Principles**
+- **Fallacies and Pitfalls**
+
+### Chapter 5 — Data Engineering
+- **Data Engineering as a Systems Discipline**
+- **Four Pillars Framework**
+- **Data Cascades and the Need for Systematic Foundations**
+- **Data Pipeline Architecture**
+- **Strategic Data Acquisition**
+- **Data Ingestion**
+- **Systematic Data Processing**
+- **Data Labeling**
+- **Strategic Storage Architecture**
+- **Data Governance**
+- **Fallacies and Pitfalls**
+
+### Chapter 6 — AI Frameworks
+- **Framework Abstraction and Necessity**
+- **Historical Development Trajectory**
+- **Fundamental Concepts**
+- **Framework Architecture**
+- **Framework Ecosystem**
+- **System Integration**
+- **Major Framework Platform Analysis**
+- **Deployment Environment-Specific Frameworks**
+- **Systematic Framework Selection Methodology**
+- **Systematic Framework Performance Assessment**
+- **Common Framework Selection Misconceptions**
+
+### Chapter 7 — AI Training
+- **Training Systems Evolution and Architecture**
+- **Training Systems**
+- **Mathematical Foundations**
+- **Pipeline Architecture**
+- **Pipeline Optimizations**
+- **Distributed Systems**
+- **Performance Optimization**
+- **Hardware Acceleration**
+- **Fallacies and Pitfalls**
+
+### Chapter 8 — Efficient AI
+- **The Efficiency Imperative**
+- **Defining System Efficiency**
+- **AI Scaling Laws**
+- **The Efficiency Framework**
+- **Real-World Efficiency Strategies**
+- **Efficiency Trade-offs and Challenges**
+- **Strategic Trade-off Management**
+- **Engineering Principles for Efficient AI**
+- **Societal and Ethical Implications**
+- **Fallacies and Pitfalls**
+
+### Chapter 9 — Model Optimizations
+- **Model Optimization Fundamentals**
+- **Optimization Framework**
+- **Deployment Context**
+- **Framework Application and Navigation**
+- **Optimization Dimensions**
+- **Structural Model Optimization Methods**
+- **Quantization and Precision Optimization**
+- **Architectural Efficiency Techniques**
+- **Implementation Strategy and Evaluation**
+- **AutoML and Automated Optimization Strategies**
+- **Implementation Tools and Software Frameworks**
+- **Technique Comparison**
+- **Fallacies and Pitfalls**
+
+### Chapter 10 — AI Acceleration
+- **AI Hardware Acceleration Fundamentals**
+- **Evolution of Hardware Specialization**
+- **AI Compute Primitives**
+- **AI Memory Systems**
+- **Hardware Mapping Fundamentals for Neural Networks**
+- **Dataflow Optimization Strategies**
+- **Compiler Support**
+- **Runtime Support**
+- **Multi-Chip AI Acceleration**
+- **Heterogeneous SoC AI Acceleration**
+- **Fallacies and Pitfalls**
+
+### Chapter 11 — Benchmarking AI
+- **Machine Learning Benchmarking Framework**
+- **Historical Context**
+- **Machine Learning Benchmarks**
+- **Benchmarking Granularity**
+- **Benchmark Components**
+- **Training vs. Inference Evaluation**
+- **Training Benchmarks**
+- **Inference Benchmarks**
+- **Power Measurement Techniques**
+- **Benchmarking Limitations and Best Practices**
+- **Model and Data Benchmarking**
+- **Production Environment Evaluation**
+- **Fallacies and Pitfalls**
+
+### Chapter 12 — ML Operations
+- **Introduction to Machine Learning Operations**
+- **Historical Context**
+- **Technical Debt and System Complexity**
+- **Development Infrastructure and Automation**
+- **Production Operations**
+- **Roles and Responsibilities**
+- **System Design and Maturity Framework**
+- **Case Studies**
+- **Fallacies and Pitfalls**
+
+### Chapter 13 — On-Device Learning
+- **Distributed Learning Paradigm Shift**
+- **Motivations and Benefits**
+- **Design Constraints**
+- **Model Adaptation**
+- **Data Efficiency**
+- **Federated Learning**
+- **Production Integration**
+- **Systems Integration for Production Deployment**
+- **Persistent Technical and Operational Challenges**
+- **Fallacies and Pitfalls**
+
+### Chapter 14 — Security & Privacy
+- **Security and Privacy in ML Systems**
+- **Foundational Concepts and Definitions**
+- **Learning from Security Breaches**
+- **Systematic Threat Analysis and Risk Assessment**
+- **Model-Specific Attack Vectors**
+- **Hardware-Level Security Vulnerabilities**
+- **When ML Systems Become Attack Tools**
+- **Comprehensive Defense Architectures**
+- **Practical Implementation Roadmap**
+- **Fallacies and Pitfalls**
+
+### Chapter 15 — Robust AI
+- **Introduction to Robust AI Systems**
+- **Real-World Robustness Failures**
+- **A Unified Framework for Robust AI**
+- **Hardware Faults**
+- **Intentional Input Manipulation**
+- **Environmental Shifts**
+- **Robustness Evaluation Tools**
+- **Input-Level Attacks and Model Robustness**
+- **Software Faults**
+- **Fault Injection Tools and Frameworks**
+- **Fallacies and Pitfalls**
+
+### Chapter 16 — Responsible AI
+- **Introduction to Responsible AI**
+- **Core Principles**
+- **Integrating Principles Across the ML Lifecycle**
+- **Responsible AI Across Deployment Environments**
+- **Technical Foundations**
+- **Sociotechnical Dynamics**
+- **Implementation Challenges**
+- **AI Safety and Value Alignment**
+- **Fallacies and Pitfalls**
+
+### Chapter 17 — Sustainable AI
+- **Sustainable AI as an Engineering Discipline**
+- **The Sustainability Crisis in AI**
+- **Environmental Impact and Ethical Foundations**
+- **Measurement and Assessment**
+- **Hardware Lifecycle Environmental Assessment**
+- **Implementation and Solutions**
+- **Embedded AI and E-Waste**
+- **Policy and Regulation**
+- **Public Engagement**
+- **Future Challenges**
+- **Fallacies and Pitfalls**
+
+### Chapter 18 — AI for Good
+- **Trustworthy AI Under Extreme Constraints**
+- **Societal Challenges and AI Opportunities**
+- **Real-World Deployment Paradigms**
+- **Sustainable Development Goals Framework**
+- **Resource Constraints and Engineering Challenges**
+- **Design Pattern Framework**
+- **Design Patterns Implementation**
+- **Theoretical Foundations for Constrained Learning**
+- **Common Deployment Failures and Sociotechnical Pitfalls**
+
+### Chapter 19 — AGI Systems
+- **From Specialized AI to General Intelligence**
+- **Defining AGI: Intelligence as a Systems Problem**
+- **The Compound AI Systems Framework**
+- **Building Blocks for Compound Intelligence**
+- **Alternative Architectures for AGI**
+- **Training Methodologies for Compound Systems**
+- **Production Deployment of Compound AI Systems**
+- **Remaining Technical Barriers**
+- **Emergent Intelligence Through Multi-Agent Coordination**
+- **Engineering Pathways to AGI**
+- **Implications for ML Systems Engineers**
+- **AGI Through Systems Engineering Principles**
+- **Core Design Principles for AGI Systems**
+- **Integrated Development Framework for AGI**
+- **Fallacies and Pitfalls**
+
+### Conclusion
+- **Synthesizing ML Systems Engineering: From Components to Intelligence**
+- **Systems Engineering Principles for ML**
+- **Applying Principles Across Three Critical Domains**
+- **Engineering for Performance at Scale**
+- **Navigating Production Reality**
+- **Future Directions and Emerging Opportunities**
+- **Your Journey Forward: Engineering Intelligence**
+
+### Lab Sections (Embedded / TinyML)
+- **Getting Started** — Prerequisites, lab categories, platform compatibility, core data modalities
+- **Hardware Kits** — Featured platform, system requirements, hardware overview, platform comparison/selection
+- **IDE Setup** — Platform-specific software installation, development tool configuration, environment verification
+- **Nicla Vision Labs** — Setup · Image Classification · Object Detection · Keyword Spotting (KWS) · Motion Classification and Anomaly Detection
+- **XIAO ESP32S3 Labs** — Setup · Image Classification · Object Detection · Keyword Spotting (KWS) · Motion Classification and Anomaly Detection
+- **Seeed Studio (No-Code)** — SenseCraft AI Studio · Exploring CV AI models · Image Classification project
+- **Raspberry Pi Labs** — Setup · Image Classification · Object Detection · Small Language Models (SLM) with Ollama/RAG · Vision-Language Models (VLM) with Florence-2
+- **Feature Engineering** — KWS Feature Engineering · DSP Spectral Features (MFCCs, time domain, spectral, time-frequency)
+
+### Glossary & References
+- Comprehensive ML Systems glossary (A–Z)
+- References
+
+---
+
+## AI Engineering — Chip Huyen (Chapter Map)
+
+> Chip Huyen. Comprehensive guide to building AI applications with foundation models. Covers the full AI engineering stack — from understanding foundation models and evaluation methodology, through prompt engineering, RAG, agents, finetuning, and dataset engineering, to inference optimization and production architecture. Bridges the gap between ML engineering and modern LLM-powered application development.
+
+### Preface
+- **What This Book Is About**
+- **What This Book Is Not**
+- **Who This Book Is For**
+- **Navigating This Book**
+- **Conventions Used in This Book**
+- **Using Code Examples**
+- **O'Reilly Online Learning**
+- **How to Contact Us**
+- **Acknowledgments**
+
+### Chapter 1 — Introduction to Building AI Applications with Foundation Models
+- **The Rise of AI Engineering**
+  - From Language Models to Large Language Models · From Large Language Models to Foundation Models · From Foundation Models to AI Engineering
+- **Foundation Model Use Cases**
+  - Coding · Image and Video Production · Writing · Education · Conversational Bots · Information Aggregation · Data Organization · Workflow Automation
+- **Planning AI Applications**
+  - Use Case Evaluation · Setting Expectations · Milestone Planning · Maintenance
+- **The AI Engineering Stack**
+  - Three Layers of the AI Stack · AI Engineering Versus ML Engineering · AI Engineering Versus Full-Stack Engineering
+- **Summary**
+
+### Chapter 2 — Understanding Foundation Models
+- **Training Data**
+  - Multilingual Models · Domain-Specific Models
+- **Modeling**
+  - Model Architecture · Model Size
+- **Post-Training**
+  - Supervised Finetuning · Preference Finetuning
+- **Sampling**
+  - Sampling Fundamentals · Sampling Strategies · Test Time Compute · Structured Outputs · The Probabilistic Nature of AI
+- **Summary**
+
+### Chapter 3 — Evaluation Methodology
+- **Challenges of Evaluating Foundation Models**
+- **Understanding Language Modeling Metrics**
+  - Entropy · Cross Entropy · Bits-per-Character and Bits-per-Byte · Perplexity · Perplexity Interpretation and Use Cases
+- **Exact Evaluation**
+  - Functional Correctness · Similarity Measurements Against Reference Data · Introduction to Embedding
+- **AI as a Judge**
+  - Why AI as a Judge? · How to Use AI as a Judge · Limitations of AI as a Judge · What Models Can Act as Judges?
+- **Ranking Models with Comparative Evaluation**
+  - Challenges of Comparative Evaluation · The Future of Comparative Evaluation
+- **Summary**
+
+### Chapter 4 — Evaluate AI Systems
+- **Evaluation Criteria**
+  - Domain-Specific Capability · Generation Capability · Instruction-Following Capability · Cost and Latency
+- **Model Selection**
+  - Model Selection Workflow · Model Build Versus Buy · Navigate Public Benchmarks
+- **Design Your Evaluation Pipeline**
+  - Step 1. Evaluate All Components in a System · Step 2. Create an Evaluation Guideline · Step 3. Define Evaluation Methods and Data
+- **Summary**
+
+### Chapter 5 — Prompt Engineering
+- **Introduction to Prompting**
+  - In-Context Learning: Zero-Shot and Few-Shot · System Prompt and User Prompt · Context Length and Context Efficiency
+- **Prompt Engineering Best Practices**
+  - Write Clear and Explicit Instructions · Provide Sufficient Context · Break Complex Tasks into Simpler Subtasks · Give the Model Time to Think · Iterate on Your Prompts · Evaluate Prompt Engineering Tools · Organize and Version Prompts
+- **Defensive Prompt Engineering**
+  - Proprietary Prompts and Reverse Prompt Engineering · Jailbreaking and Prompt Injection · Information Extraction · Defenses Against Prompt Attacks
+- **Summary**
+
+### Chapter 6 — RAG and Agents
+- **RAG**
+  - RAG Architecture · Retrieval Algorithms · Retrieval Optimization · RAG Beyond Texts
+- **Agents**
+  - Agent Overview · Tools · Planning · Agent Failure Modes and Evaluation
+- **Memory**
+- **Summary**
+
+### Chapter 7 — Finetuning
+- **Finetuning Overview**
+- **When to Finetune**
+  - Reasons to Finetune · Reasons Not to Finetune · Finetuning and RAG
+- **Memory Bottlenecks**
+  - Backpropagation and Trainable Parameters · Memory Math · Numerical Representations · Quantization
+- **Finetuning Techniques**
+  - Parameter-Efficient Finetuning · Model Merging and Multi-Task Finetuning · Finetuning Tactics
+- **Summary**
+
+### Chapter 8 — Dataset Engineering
+- **Data Curation**
+  - Data Quality · Data Coverage · Data Quantity · Data Acquisition and Annotation
+- **Data Augmentation and Synthesis**
+  - Why Data Synthesis · Traditional Data Synthesis Techniques · AI-Powered Data Synthesis · Model Distillation
+- **Data Processing**
+  - Inspect Data · Deduplicate Data · Clean and Filter Data · Format Data
+- **Summary**
+
+### Chapter 9 — Inference Optimization
+- **Understanding Inference Optimization**
+  - Inference Overview · Inference Performance Metrics · AI Accelerators
+- **Inference Optimization**
+  - Model Optimization · Inference Service Optimization
+- **Summary**
+
+### Chapter 10 — AI Engineering Architecture and User Feedback
+- **AI Engineering Architecture**
+  - Step 1. Enhance Context · Step 2. Put in Guardrails · Step 3. Add Model Router and Gateway · Step 4. Reduce Latency with Caches · Step 5. Add Agent Patterns · Monitoring and Observability · AI Pipeline Orchestration
+- **User Feedback**
+  - Extracting Conversational Feedback · Feedback Design · Feedback Limitations
+- **Summary**
+
+### Epilogue
+
+---
+
+## Practical MLOps — Noah Gift & Alfredo Deza (Chapter Map)
+
+> Noah Gift & Alfredo Deza. Practical guide to MLOps covering the full spectrum from DevOps foundations and cloud computing basics through containerization, continuous delivery, AutoML, monitoring, and cloud-specific MLOps on AWS, Azure, and GCP. Emphasizes hands-on pipelines, real-world case studies, and building production-ready ML systems with industry best practices.
+
+### Preface
+- **Why We Wrote This Book**
+- **How This Book Is Organized**
+  - Chapters · Appendixes · Exercise Questions · Discussion Questions
+- **Conventions Used in This Book**
+- **Acknowledgments**
+
+### Chapter 1 — Introduction to MLOps
+- **Rise of the Machine Learning Engineer and MLOps**
+- **What Is MLOps?**
+- **DevOps and MLOps**
+- **An MLOps Hierarchy of Needs**
+  - Implementing DevOps · Configuring Continuous Integration with GitHub Actions · DataOps and Data Engineering · Platform Automation · MLOps
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 2 — MLOps Foundations
+- **Bash and the Linux Command Line**
+  - Cloud Shell Development Environments · Bash Shell and Commands (List Files, Run Commands, Files and Navigation, Input/Output, Configuration, Writing a Script)
+- **Cloud Computing Foundations and Building Blocks**
+- **Getting Started with Cloud Computing**
+- **Python Crash Course · Minimalistic Python Tutorial**
+- **Math for Programmers Crash Course**
+  - Descriptive Statistics and Normal Distributions · Optimization
+- **Machine Learning Key Concepts**
+- **Doing Data Science**
+- **Build an MLOps Pipeline from Zero**
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 3 — MLOps for Containers and Edge Devices
+- **Containers**
+  - Container Runtime · Creating a Container · Running a Container · Best Practices · Serving a Trained Model Over HTTP
+- **Edge Devices**
+  - Coral · Azure Percept · TFHub · Porting Over Non-TPU Models
+- **Containers for Managed ML Systems**
+  - Containers in Monetizing MLOps · Build Once, Run Many MLOps Workflow
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 4 — Continuous Delivery for Machine Learning Models
+- **Packaging for ML Models**
+- **Infrastructure as Code for Continuous Delivery of ML Models**
+- **Using Cloud Pipelines**
+  - Controlled Rollout of Models · Testing Techniques for Model Deployment
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 5 — AutoML and KaizenML
+- **AutoML**
+  - MLOps Industrial Revolution · Kaizen Versus KaizenML · Feature Stores
+- **Apple's Ecosystem**
+  - Apple's AutoML: Create ML · Apple's Core ML Tools
+- **Google's AutoML and Edge Computer Vision**
+- **Azure's AutoML**
+- **AWS AutoML**
+- **Open Source AutoML Solutions**
+  - Ludwig · FLAML
+- **Model Explainability**
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 6 — Monitoring and Logging
+- **Observability for Cloud MLOps**
+- **Introduction to Logging · Logging in Python**
+  - Modifying Log Levels · Logging Different Applications
+- **Monitoring and Observability**
+  - Basics of Model Monitoring · Monitoring Drift with AWS SageMaker · Monitoring Drift with Azure ML
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 7 — MLOps for AWS
+- **Introduction to AWS**
+  - Getting Started with AWS Services · MLOps on AWS
+- **MLOps Cookbook on AWS**
+  - CLI Tools · Flask Microservice
+- **AWS Lambda Recipes**
+  - AWS Lambda-SAM Local · AWS Lambda-SAM Containerized Deploy
+- **Applying AWS Machine Learning to the Real World**
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 8 — MLOps for Azure
+- **Azure CLI and Python SDK**
+- **Authentication**
+  - Service Principal · Authenticating API Services
+- **Compute Instances**
+- **Deploying**
+  - Registering Models · Versioning Datasets
+- **Deploying Models to a Compute Cluster**
+  - Configuring a Cluster · Deploying a Model
+- **Troubleshooting Deployment Issues**
+  - Retrieving Logs · Application Insights · Debugging Locally
+- **Azure ML Pipelines**
+  - Publishing Pipelines · Azure Machine Learning Designer
+- **ML Lifecycle**
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 9 — MLOps for GCP
+- **Google Cloud Platform Overview**
+  - Continuous Integration and Continuous Delivery · Kubernetes Hello World · Cloud Native Database Choice and Design
+- **DataOps on GCP: Applied Data Engineering**
+- **Operationalizing ML Models**
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 10 — Machine Learning Interoperability
+- **Why Interoperability Is Critical**
+- **ONNX: Open Neural Network Exchange**
+  - ONNX Model Zoo · Convert PyTorch into ONNX · Create a Generic ONNX Checker · Convert TensorFlow into ONNX · Deploy ONNX to Azure
+- **Apple Core ML**
+- **Edge Integration**
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 11 — Building MLOps Command Line Tools and Microservices
+- **Python Packaging · The Requirements File**
+- **Command Line Tools**
+  - Creating a Dataset Linter · Modularizing a Command Line Tool
+- **Microservices**
+  - Creating a Serverless Function · Authenticating to Cloud Functions · Building a Cloud-Based CLI
+- **Machine Learning CLI Workflows**
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Chapter 12 — Machine Learning Engineering and MLOps Case Studies
+- **Unlikely Benefits of Ignorance in Building Machine Learning Models**
+- **MLOps Projects at Sqor Sports Social Network**
+  - Mechanical Turk Data Labeling · Influencer Rank · Athlete Intelligence (AI Product)
+- **The Perfect Technique Versus the Real World**
+- **Critical Challenges in MLOps**
+  - Ethical and Unintended Consequences · Lack of Operational Excellence · Focus on Prediction Accuracy Versus the Big Picture
+- **Final Recommendations to Implement MLOps**
+  - Data Governance and Cybersecurity · MLOps Design Patterns
+- **Conclusion · Exercises · Critical Thinking Discussion Questions**
+
+### Appendixes
+- **Appendix A — Key Terms**
+- **Appendix B — Technology Certifications** (AWS, Azure, GCP, SQL certifications)
+- **Appendix C — Remote Work** (Equipment, Network, Home Work Area)
+- **Appendix D — Think Like a VC for Your Career** (Pear Revenue Strategy)
+- **Appendix E — Building a Technical Portfolio for MLOps** (Project templates and job search strategies)
+- **Appendix F — Data Science Case Study: Intermittent Fasting**
+- **Appendix G — Additional Educational Resources** (MLOps critical thinking questions, education disruption)
+- **Appendix H — Technical Project Management** (Project Plan, Weekly Demo, Task Tracking)
+
+---
+
+## ML for Absolute Beginners — Oliver Theobald
+
+### Preface
+- **Introduction to the Book**
+
+### Chapter 1 — What Is Machine Learning?
+- **Definition and Overview**
+- **Machine Learning vs. Traditional Programming**
+- **Real-World Applications**
+
+### Chapter 2 — Machine Learning Categories
+- **Supervised Learning**
+- **Unsupervised Learning**
+- **Reinforcement Learning**
+- **Semi-Supervised Learning**
+
+### Chapter 3 — The Machine Learning Toolbox
+- **Python Overview**
+- **Key Libraries: NumPy, Pandas, Scikit-learn, Matplotlib**
+- **Jupyter Notebooks**
+
+### Chapter 4 — Data Scrubbing
+- **What Is Data Scrubbing?**
+- **Handling Missing Values**
+- **Removing Duplicates · Fixing Structural Errors**
+- **Filtering Outliers**
+
+### Chapter 5 — Setting Up Your Data
+- **Feature Selection**
+- **Training Set vs. Test Set**
+- **Data Normalization and Scaling**
+
+### Chapter 6 — Linear Regression
+- **What Is Linear Regression?**
+- **Simple vs. Multiple Linear Regression**
+- **Ordinary Least Squares**
+- **Evaluating Model Performance (R², RMSE)**
+
+### Chapter 7 — Logistic Regression
+- **What Is Logistic Regression?**
+- **Binary Classification**
+- **Sigmoid Function**
+- **Confusion Matrix and Accuracy**
+
+### Chapter 8 — k-Nearest Neighbors
+- **How kNN Works**
+- **Choosing k**
+- **Distance Metrics (Euclidean, Manhattan)**
+- **Classification with kNN**
+
+### Chapter 9 — k-Means Clustering
+- **How k-Means Works**
+- **Choosing the Number of Clusters**
+- **Elbow Method**
+- **Use Cases for Clustering**
+
+### Chapter 10 — Bias & Variance
+- **Bias-Variance Tradeoff**
+- **Underfitting vs. Overfitting**
+- **Cross-Validation**
+
+### Chapter 11 — Support Vector Machines
+- **What Is an SVM?**
+- **Hyperplane and Margin**
+- **Kernel Trick**
+- **Classification with SVM**
+
+### Chapter 12 — Artificial Neural Networks
+- **Biological Inspiration**
+- **Perceptrons and Layers**
+- **Activation Functions**
+- **Backpropagation and Training**
+- **Deep Learning Overview**
+
+### Chapter 13 — Decision Trees
+- **How Decision Trees Work**
+- **Splitting Criteria (Gini, Entropy)**
+- **Pruning**
+- **Advantages and Limitations**
+
+### Chapter 14 — Ensemble Modeling
+- **What Is Ensemble Learning?**
+- **Bagging and Boosting**
+- **Random Forests · Gradient Boosting**
+
+### Chapter 15 — Development Environment
+- **Setting Up Python**
+- **Installing Libraries with pip**
+- **Using Jupyter Notebook**
+
+### Chapter 16 — Building a Model in Python
+- **End-to-End Workflow**
+- **Loading and Exploring Data**
+- **Training and Evaluating a Model**
+
+### Chapter 17 — Model Optimization
+- **Hyperparameter Tuning**
+- **Grid Search and Random Search**
+- **Improving Model Accuracy**
+
+### Chapter 18 — Next Steps
+- **Where to Go from Here**
+- **Further Study Paths**
+
+### Further Resources
+- **Recommended Books, Courses, and Websites**
+
+### Appendix — Introduction to Python
+- **Python Basics for ML**
+- **Variables, Data Types, Control Flow**
+- **Functions and Libraries**
+
+---
+
+## ML for Humans — Vishal Maini & Samer Sabri (Chapter Map)
+
+> Vishal Maini & Samer Sabri. An accessible, plain-English introduction to machine learning covering core supervised and unsupervised learning, neural networks, and reinforcement learning. Designed for both technical and non-technical readers. Published August 2017.
+
+### Part 1 — Introduction
+- **The big picture of artificial intelligence and machine learning**
+  - Sections: Artificial narrow intelligence (ANI) · Artificial general intelligence (AGI) · Artificial superintelligence (ASI) · Why machine learning matters · How to read this series · About the authors
+
+### Part 2.1 — Supervised Learning
+- **Learning with an answer key**
+  - Sections: Regression vs classification · Linear regression (OLS) · Loss functions (mean squared error) · Overfitting and the bias-variance tradeoff · Gradient descent (learning the parameters) · Learning rate and convergence
+
+### Part 2.2 — Supervised Learning II
+- **Classification methods**
+  - Sections: Logistic regression · Decision boundary · Log-odds and the sigmoid function · Support vector machines (SVMs) · Maximum margin classifier · Kernel trick · Soft margin (C parameter)
+
+### Part 2.3 — Supervised Learning III
+- **Non-parametric learners**
+  - Sections: K-nearest neighbors (KNN) · Decision trees · Information gain and Gini impurity · Random forests · Bagging and ensemble methods · Cross-validation · Hyperparameter tuning
+
+### Part 3 — Unsupervised Learning
+- **Clustering and dimensionality reduction**
+  - Sections: K-means clustering · Hierarchical clustering (agglomerative) · Dimensionality reduction · Principal components analysis (PCA) · Singular value decomposition (SVD) · When to use unsupervised learning
+
+### Part 4 — Neural Networks & Deep Learning
+- **Why, where, and how deep learning works**
+  - Sections: Biological inspiration (neurons and synapses) · Perceptrons and activation functions · Feedforward neural networks · Backpropagation · Vanishing gradient problem · Convolutional neural networks (CNNs) · Pooling layers · Recurrent neural networks (RNNs) · LSTMs · Real-world applications (image recognition, NLP, speech)
+
+### Part 5 — Reinforcement Learning
+- **Learning through interaction**
+  - Sections: Exploration vs exploitation · Markov decision processes (MDPs) · Rewards and value functions · Q-learning · Policy gradient methods · Deep reinforcement learning (DQN) · The value learning problem and AI alignment
+
+### Appendix — The Best Machine Learning Resources
+- **Curated learning resources**
+  - Sections: Online courses · Textbooks · Blogs and tutorials · Datasets and tools · How to build a machine learning curriculum
+
+---
