@@ -2658,133 +2658,136 @@
 #### Chapter 1 — Introduction
 - **1.1 Who Should Read This Book?**
 - **1.2 Historical Trends in Deep Learning**
+  - Rule-based → classic ML → representation learning → deep learning (figure 1.5)
+  - Increasing network size, data, and task complexity over time
+  - Key milestones: LSTM, AlexNet, sequence-to-sequence, attention
 
 #### Chapter 2 — Linear Algebra
 - **2.1 Scalars, Vectors, Matrices and Tensors**
-- **2.2 Multiplying Matrices and Vectors**
+- **2.2 Multiplying Matrices and Vectors** — dot product, matrix-vector product
 - **2.3 Identity and Inverse Matrices**
 - **2.4 Linear Dependence and Span**
-- **2.5 Norms**
-- **2.6 Special Kinds of Matrices and Vectors**
-- **2.7 Eigendecomposition**
-- **2.8 Singular Value Decomposition**
-- **2.9 The Moore-Penrose Pseudoinverse**
+- **2.5 Norms** — L¹, L², L∞, Frobenius norm
+- **2.6 Special Kinds of Matrices and Vectors** — diagonal, symmetric, orthogonal, unit vectors
+- **2.7 Eigendecomposition** — A = VΛV⁻¹, positive definite via eigenvalues
+- **2.8 Singular Value Decomposition** — A = UDVᵀ, always exists (unlike eigen)
+- **2.9 The Moore-Penrose Pseudoinverse** — A⁺ for least-squares solutions
 - **2.10 The Trace Operator**
-- **2.11 The Determinant**
-- **2.12 Example: Principal Components Analysis**
+- **2.11 The Determinant** — volume scaling, zero = singular matrix
+- **2.12 Example: Principal Components Analysis** — eigenvectors of XᵀX → principal components
 
 #### Chapter 3 — Probability and Information Theory
-- **3.1 Why Probability?**
+- **3.1 Why Probability?** — frequentist vs Bayesian, uncertainty in AI
 - **3.2 Random Variables**
-- **3.3 Probability Distributions**
-- **3.4 Marginal Probability**
+- **3.3 Probability Distributions** — PMF (discrete), PDF (continuous)
+- **3.4 Marginal Probability** — summing/integrating out variables
 - **3.5 Conditional Probability**
 - **3.6 The Chain Rule of Conditional Probabilities**
 - **3.7 Independence and Conditional Independence**
 - **3.8 Expectation, Variance and Covariance**
-- **3.9 Common Probability Distributions**
-- **3.10 Useful Properties of Common Functions**
+- **3.9 Common Probability Distributions** — Bernoulli, Multinoulli, Gaussian, Exponential, Laplace, Dirac, Mixtures
+- **3.10 Useful Properties of Common Functions** — logistic sigmoid, softplus
 - **3.11 Bayes' Rule**
-- **3.12 Technical Details of Continuous Variables**
-- **3.13 Information Theory**
-- **3.14 Structured Probabilistic Models**
+- **3.12 Technical Details of Continuous Variables** — measure theory basics
+- **3.13 Information Theory** — Shannon entropy, KL divergence, cross-entropy, mutual information
+- **3.14 Structured Probabilistic Models** — directed (Bayesian networks) vs undirected (MRFs) graphical models
 
 #### Chapter 4 — Numerical Computation
-- **4.1 Overflow and Underflow**
-- **4.2 Poor Conditioning**
-- **4.3 Gradient-Based Optimization**
-- **4.4 Constrained Optimization**
-- **4.5 Example: Linear Least Squares**
+- **4.1 Overflow and Underflow** — numerical stability in softmax, log-sum-exp trick
+- **4.2 Poor Conditioning** — condition number, sensitivity of solutions
+- **4.3 Gradient-Based Optimization** — critical points, saddle points, directional derivative, Jacobian, Hessian, second-order methods, Newton's method, gradient descent variants
+- **4.4 Constrained Optimization** — KKT conditions, Lagrange multipliers, generalized Lagrangian
+- **4.5 Example: Linear Least Squares** — Moore-Penrose pseudoinverse solution
 
 #### Chapter 5 — Machine Learning Basics
-- **5.1 Learning Algorithms**
-- **5.2 Capacity, Overfitting and Underfitting**
-- **5.3 Hyperparameters and Validation Sets**
-- **5.4 Estimators, Bias and Variance**
-- **5.5 Maximum Likelihood Estimation**
-- **5.6 Bayesian Statistics**
-- **5.7 Supervised Learning Algorithms**
-- **5.8 Unsupervised Learning Algorithms**
-- **5.9 Stochastic Gradient Descent**
-- **5.10 Building a Machine Learning Algorithm**
-- **5.11 Challenges Motivating Deep Learning**
+- **5.1 Learning Algorithms** — task T, performance P, experience E; linear regression example
+- **5.2 Capacity, Overfitting and Underfitting** — hypothesis space, VC dimension, bias-variance, regularization
+- **5.3 Hyperparameters and Validation Sets** — train/val/test split, cross-validation
+- **5.4 Estimators, Bias and Variance** — point estimators, consistency, bias-variance decomposition
+- **5.5 Maximum Likelihood Estimation** — log-likelihood, connection to KL divergence
+- **5.6 Bayesian Statistics** — prior, posterior, MAP estimate, Bayesian linear regression
+- **5.7 Supervised Learning Algorithms** — linear regression, SVM, kernel methods, decision trees, kNN
+- **5.8 Unsupervised Learning Algorithms** — PCA, k-means, GMMs, sparse coding
+- **5.9 Stochastic Gradient Descent** — online learning, minibatches, generalization error minimization
+- **5.10 Building a Machine Learning Algorithm** — combining dataset, cost function, optimizer, model
+- **5.11 Challenges Motivating Deep Learning** — curse of dimensionality, local constancy prior, manifold learning
 
 ### Part II — Modern Practical Deep Networks
 
 #### Chapter 6 — Deep Feedforward Networks
-- **6.1 Example: Learning XOR**
-- **6.2 Gradient-Based Learning**
-- **6.3 Hidden Units**
-- **6.4 Architecture Design**
-- **6.5 Back-Propagation and Other Differentiation Algorithms**
+- **6.1 Example: Learning XOR** — why linear models fail, need for nonlinear hidden layers, feature space φ(x)
+- **6.2 Gradient-Based Learning** — cost functions (MSE, cross-entropy), output units (linear, sigmoid, softmax, Gaussian mixtures)
+- **6.3 Hidden Units** — ReLU and variants (Leaky ReLU, PReLU, Maxout), sigmoid, tanh; biological motivation for ReLU
+- **6.4 Architecture Design** — depth vs width, universal approximation theorem, deeper = more efficient representation (figure 6.7)
+- **6.5 Back-Propagation and Other Differentiation Algorithms** — forward/backward pass, computational graph, chain rule, general backprop algorithm, symbol-to-symbol vs symbol-to-number
 - **6.6 Historical Notes**
 
 #### Chapter 7 — Regularization for Deep Learning
-- **7.1 Parameter Norm Penalties**
-- **7.2 Norm Penalties as Constrained Optimization**
+- **7.1 Parameter Norm Penalties** — L² (weight decay, MAP Gaussian prior), L¹ (sparsity, MAP Laplace prior)
+- **7.2 Norm Penalties as Constrained Optimization** — column norm constraint per hidden unit
 - **7.3 Regularization and Under-Constrained Problems**
-- **7.4 Dataset Augmentation**
-- **7.5 Noise Robustness**
-- **7.6 Semi-Supervised Learning**
-- **7.7 Multi-Task Learning**
-- **7.8 Early Stopping**
-- **7.9 Parameter Tying and Parameter Sharing**
+- **7.4 Dataset Augmentation** — transforms, injecting noise in input space
+- **7.5 Noise Robustness** — noise in weights (Bayesian interpretation), output noise
+- **7.6 Semi-Supervised Learning** — shared representation for labeled and unlabeled
+- **7.7 Multi-Task Learning** — shared lower layers, task-specific upper layers
+- **7.8 Early Stopping** — validation error as stopping criterion; equivalent to L² regularization
+- **7.9 Parameter Tying and Parameter Sharing** — CNNs as weight sharing, reduces effective parameters
 - **7.10 Sparse Representations**
-- **7.11 Bagging and Other Ensemble Methods**
-- **7.12 Dropout**
-- **7.13 Adversarial Training**
+- **7.11 Bagging and Other Ensemble Methods** — model averaging, why ensembles generalize better
+- **7.12 Dropout** — training with random subnetworks, approximate bagging, effective regularizer
+- **7.13 Adversarial Training** — adversarial examples, robustness via adversarial data augmentation
 - **7.14 Tangent Distance, Tangent Prop and Manifold Tangent Classifier**
 
 #### Chapter 8 — Optimization for Training Deep Models
-- **8.1 How Learning Differs from Pure Optimization**
-- **8.2 Challenges in Neural Network Optimization**
-- **8.3 Basic Algorithms**
-- **8.4 Parameter Initialization Strategies**
-- **8.5 Algorithms with Adaptive Learning Rates**
-- **8.6 Approximate Second-Order Methods**
-- **8.7 Optimization Strategies and Meta-Algorithms**
+- **8.1 How Learning Differs from Pure Optimization** — empirical risk vs true risk, minibatch generalization, SGD minimizes generalization error
+- **8.2 Challenges in Neural Network Optimization** — ill-conditioning, local minima, saddle points, cliffs, exploding/vanishing gradients, inexact gradients, poor correspondence between local and global structure
+- **8.3 Basic Algorithms** — SGD, momentum, Nesterov momentum
+- **8.4 Parameter Initialization Strategies** — breaking symmetry, Xavier/Glorot init, orthogonal init, sparse init
+- **8.5 Algorithms with Adaptive Learning Rates** — AdaGrad, RMSProp, Adam, AdaDelta; when Adam is preferred
+- **8.6 Approximate Second-Order Methods** — Newton's method, conjugate gradients, BFGS, L-BFGS
+- **8.7 Optimization Strategies and Meta-Algorithms** — batch normalization, coordinate descent, Polyak averaging, supervised pretraining, curriculum learning
 
 #### Chapter 9 — Convolutional Networks
-- **9.1 The Convolution Operation**
-- **9.2 Motivation**
-- **9.3 Pooling**
-- **9.4 Convolution and Pooling as an Infinitely Strong Prior**
-- **9.5 Variants of the Basic Convolution Function**
-- **9.6 Structured Outputs**
-- **9.7 Data Types**
-- **9.8 Efficient Convolution Algorithms**
+- **9.1 The Convolution Operation** — discrete convolution, cross-correlation, kernel/filter, feature maps
+- **9.2 Motivation** — sparse interactions, parameter sharing (figure 9.5), equivariant representations
+- **9.3 Pooling** — max pooling, average pooling, translation invariance, strided convolution as pooling
+- **9.4 Convolution and Pooling as an Infinitely Strong Prior** — locality and stationarity assumptions
+- **9.5 Variants of the Basic Convolution Function** — strided, dilated (atrous), transposed (deconv), depthwise separable; spatial pooling pyramid (SPP)
+- **9.6 Structured Outputs** — pixel-wise labeling, segmentation
+- **9.7 Data Types** — 1D (audio, text), 2D (images), 3D (video, volumetric)
+- **9.8 Efficient Convolution Algorithms** — FFT-based convolution
 - **9.9 Random or Unsupervised Features**
-- **9.10 The Neuroscientific Basis for Convolutional Networks**
-- **9.11 Convolutional Networks and the History of Deep Learning**
+- **9.10 The Neuroscientific Basis for Convolutional Networks** — simple/complex cells in V1
+- **9.11 Convolutional Networks and the History of Deep Learning** — LeNet, AlexNet breakthrough
 
 #### Chapter 10 — Sequence Modeling: Recurrent and Recursive Nets
-- **10.1 Unfolding Computational Graphs**
-- **10.2 Recurrent Neural Networks**
-- **10.3 Bidirectional RNNs**
-- **10.4 Encoder-Decoder Sequence-to-Sequence Architectures**
-- **10.5 Deep Recurrent Networks**
-- **10.6 Recursive Neural Networks**
-- **10.7 The Challenge of Long-Term Dependencies**
-- **10.8 Echo State Networks**
-- **10.9 Leaky Units and Other Strategies for Multiple Time Scales**
-- **10.10 The Long Short-Term Memory and Other Gated RNNs**
-- **10.11 Optimization for Long-Term Dependencies**
-- **10.12 Explicit Memory**
+- **10.1 Unfolding Computational Graphs** — recurrent edge unrolled through time, shared parameters
+- **10.2 Recurrent Neural Networks** — teacher forcing, backprop through time (BPTT), bidirectional training, output recurrence vs hidden recurrence
+- **10.3 Bidirectional RNNs** — combines past and future context
+- **10.4 Encoder-Decoder Sequence-to-Sequence Architectures** — variable-length input/output, context vector bottleneck
+- **10.5 Deep Recurrent Networks** — stacked RNN layers
+- **10.6 Recursive Neural Networks** — tree-structured networks, parse trees
+- **10.7 The Challenge of Long-Term Dependencies** — vanishing/exploding gradients through time
+- **10.8 Echo State Networks** — reservoir computing, fixed random recurrent weights
+- **10.9 Leaky Units and Other Strategies for Multiple Time Scales** — skip connections through time, multiple timescales
+- **10.10 The Long Short-Term Memory and Other Gated RNNs** — LSTM gates (input, forget, output), GRU; attention mechanism mention (Bahdanau)
+- **10.11 Optimization for Long-Term Dependencies** — gradient clipping, identity/orthogonal weight init
+- **10.12 Explicit Memory** — memory networks, neural Turing machines, attention for addressing
 
 #### Chapter 11 — Practical Methodology
-- **11.1 Performance Metrics**
-- **11.2 Default Baseline Models**
-- **11.3 Determining Whether to Gather More Data**
-- **11.4 Selecting Hyperparameters**
-- **11.5 Debugging Strategies**
-- **11.6 Example: Multi-Digit Number Recognition**
+- **11.1 Performance Metrics** — accuracy, precision/recall, F1, coverage, log-likelihood; choosing right metric for business goal
+- **11.2 Default Baseline Models** — logistic regression first, then MLP, then specialized; Adam optimizer as default
+- **11.3 Determining Whether to Gather More Data** — learning curve analysis, overfit first then regularize
+- **11.4 Selecting Hyperparameters** — manual vs grid vs random search; learning rate most important; practical guide to tuning each hyperparameter
+- **11.5 Debugging Strategies** — visualize worst errors, visualize activations/gradients, monitor train vs test error, check data pipeline
+- **11.6 Example: Multi-Digit Number Recognition** — Street View address number detection case study
 
 #### Chapter 12 — Applications
-- **12.1 Large-Scale Deep Learning**
-- **12.2 Computer Vision**
-- **12.3 Speech Recognition**
-- **12.4 Natural Language Processing**
-- **12.5 Other Applications**
+- **12.1 Large-Scale Deep Learning** — distributed training (model/data parallelism), asynchronous SGD, GPU memory coalescing, specialized hardware
+- **12.2 Computer Vision** — object detection, segmentation, image captioning, preprocessing, data augmentation for vision
+- **12.3 Speech Recognition** — CTC loss, HMM-DNN hybrid, end-to-end models; ReLU + dropout replacing pretraining
+- **12.4 Natural Language Processing** — n-gram LMs, word embeddings (word2vec, neural LMs), seq2seq, machine translation, attention (Bahdanau 2015)
+- **12.5 Other Applications** — recommender systems, knowledge graphs, robotics control
 
 ### Part III — Deep Learning Research
 
@@ -2796,23 +2799,23 @@
 - **13.5 Manifold Interpretation of PCA**
 
 #### Chapter 14 — Autoencoders
-- **14.1 Undercomplete Autoencoders**
-- **14.2 Regularized Autoencoders**
-- **14.3 Representational Power, Layer Size and Depth**
-- **14.4 Stochastic Encoders and Decoders**
-- **14.5 Denoising Autoencoders**
-- **14.6 Learning Manifolds with Autoencoders**
-- **14.7 Contractive Autoencoders**
+- **14.1 Undercomplete Autoencoders** — bottleneck forces compression; linear autoencoder = PCA
+- **14.2 Regularized Autoencoders** — sparse, denoising, contractive; overcomplete but regularized
+- **14.3 Representational Power, Layer Size and Depth** — universal approximation of codes
+- **14.4 Stochastic Encoders and Decoders** — probabilistic encoder/decoder, foundation for VAE
+- **14.5 Denoising Autoencoders** — learn to reconstruct from corrupted input; score matching connection
+- **14.6 Learning Manifolds with Autoencoders** — tangent space, dimensionality reduction for retrieval
+- **14.7 Contractive Autoencoders** — Frobenius norm of Jacobian penalty
 - **14.8 Predictive Sparse Decomposition**
-- **14.9 Applications of Autoencoders**
+- **14.9 Applications of Autoencoders** — information retrieval, dimensionality reduction, pretraining
 
 #### Chapter 15 — Representation Learning
-- **15.1 Greedy Layer-Wise Unsupervised Pretraining**
-- **15.2 Transfer Learning and Domain Adaptation**
-- **15.3 Semi-Supervised Disentangling of Causal Factors**
-- **15.4 Distributed Representation**
-- **15.5 Exponential Gains from Depth**
-- **15.6 Providing Clues to Discover Underlying Causes**
+- **15.1 Greedy Layer-Wise Unsupervised Pretraining** — DBN/RBM stacking, why it helped pre-ReLU/dropout era
+- **15.2 Transfer Learning and Domain Adaptation** — shared lower layers, fine-tuning upper layers for new task
+- **15.3 Semi-Supervised Disentangling of Causal Factors** — learning independent generative factors
+- **15.4 Distributed Representation** — exponentially many regions with n hidden units; contrast with k-nearest neighbor
+- **15.5 Exponential Gains from Depth** — depth as efficient representation of complex functions
+- **15.6 Providing Clues to Discover Underlying Causes** — priors for learning: smoothness, sparsity, temporal/spatial coherence
 
 #### Chapter 16 — Structured Probabilistic Models for Deep Learning
 - **16.1 The Challenge of Unstructured Modeling**
@@ -2847,20 +2850,20 @@
 - **19.5 Learned Approximate Inference**
 
 #### Chapter 20 — Deep Generative Models
-- **20.1 Boltzmann Machines**
-- **20.2 Restricted Boltzmann Machines**
-- **20.3 Deep Belief Networks**
-- **20.4 Deep Boltzmann Machines**
-- **20.5 Boltzmann Machines for Real-Valued Data**
+- **20.1 Boltzmann Machines** — energy-based undirected model, joint distribution over visible+hidden
+- **20.2 Restricted Boltzmann Machines** — bipartite graph (no hidden-hidden/visible-visible), contrastive divergence training
+- **20.3 Deep Belief Networks** — stacked RBMs, top two layers undirected, rest directed
+- **20.4 Deep Boltzmann Machines** — fully undirected stacked model; variational inference for training
+- **20.5 Boltzmann Machines for Real-Valued Data** — Gaussian-Bernoulli RBM
 - **20.6 Convolutional Boltzmann Machines**
 - **20.7 Boltzmann Machines for Structured or Sequential Outputs**
 - **20.8 Other Boltzmann Machines**
-- **20.9 Back-Propagation through Random Operations**
-- **20.10 Directed Generative Nets**
+- **20.9 Back-Propagation through Random Operations** — reparameterization trick (foundation of VAE)
+- **20.10 Directed Generative Nets** — VAE (variational autoencoder), DRAW, attention-based generation, GAN fundamentals, diffusion concept
 - **20.11 Drawing Samples from Autoencoders**
 - **20.12 Generative Stochastic Networks**
 - **20.13 Other Generation Schemes**
-- **20.14 Evaluating Generative Models**
+- **20.14 Evaluating Generative Models** — log-likelihood, Parzen window estimation, visual inspection
 - **20.15 Conclusion**
 
 ---
@@ -3151,45 +3154,57 @@
 
 ### Chapter 3 — A Tour of Machine Learning Classifiers Using Scikit-Learn
 - Choosing a classification algorithm
+  - Five steps of supervised ML (feature selection → metric → algorithm → evaluate → tune)
 - First steps with scikit-learn – training a perceptron
 - Modeling class probabilities via logistic regression
   - Logistic regression and conditional probabilities
   - Learning weights via logistic loss function
   - Training a logistic regression model with scikit-learn
-  - Tackling overfitting via regularization
+  - Tackling overfitting via regularization (C parameter = inverse of λ)
 - Maximum margin classification with SVMs
-  - Maximum margin intuition
-  - Kernel SVM for nonlinear problems
+  - Maximum margin intuition — large margins → lower generalization error
+  - Slack variables for non-separable data
+  - Kernel SVM for nonlinear problems (kernel trick)
+  - Alternative SVM implementations in scikit-learn
 - Decision tree learning
-  - Maximizing information gain
-  - Random forests
-- K-nearest neighbors
+  - Maximizing information gain (Gini impurity, entropy)
+  - Building and visualizing a decision tree
+  - Random forests (combining multiple trees)
+- K-nearest neighbors (lazy learning, Euclidean distance)
 
 ### Chapter 4 — Building Good Training Datasets – Data Preprocessing
 - Dealing with missing data
   - Identifying, eliminating, imputing missing values
   - scikit-learn estimator API
 - Handling categorical data
-  - Ordinal features, class labels, one-hot encoding
+  - Ordinal feature mapping
+  - Class label encoding
+  - One-hot encoding for nominal features
 - Partitioning datasets into training and test sets
 - Bringing features onto the same scale
+  - Standardization (z-score) vs min-max normalization — when to use each
+  - RobustScaler for outlier-heavy small datasets
 - Selecting meaningful features
-  - L1 and L2 regularization
-  - Sequential feature selection algorithms
-  - Feature importance with random forests
+  - L1 and L2 regularization as penalties against complexity
+  - Sequential Backward Selection (SBS) algorithm
+  - Feature importance with random forests (mean impurity decrease)
 
 ### Chapter 5 — Compressing Data via Dimensionality Reduction
 - Unsupervised dimensionality reduction via PCA
+  - Covariance matrix → eigendecomposition → principal components
   - Extracting principal components step by step
-  - Total and explained variance
+  - Total and explained variance (scree plot)
+  - Feature transformation and reconstruction
   - PCA in scikit-learn
   - Assessing feature contributions
 - Supervised data compression via LDA
-  - PCA versus LDA
-  - Computing scatter matrices
+  - PCA vs LDA: unsupervised vs supervised projection
+  - Computing within-class and between-class scatter matrices
+  - Selecting linear discriminants for new feature subspace
   - LDA via scikit-learn
 - Nonlinear dimensionality reduction and visualization
-  - t-SNE (t-distributed stochastic neighbor embedding)
+  - Manifold learning (Swiss roll example)
+  - t-SNE — pairwise distance preservation in lower space
 
 ### Chapter 6 — Learning Best Practices for Model Evaluation and Hyperparameter Tuning
 - Streamlining workflows with pipelines
@@ -3227,12 +3242,16 @@
 ### Chapter 9 — Predicting Continuous Target Variables with Regression Analysis
 - Introducing linear regression (simple and multiple)
 - Exploring the Ames Housing dataset
+  - Visualizing dataset characteristics (scatter matrix)
+  - Correlation matrix for feature selection
 - Implementing OLS linear regression
   - Gradient descent for regression parameters
-  - RANSAC for robust regression
-- Evaluating performance of linear regression models
-- Regularized methods for regression
-- Polynomial regression
+  - RANSAC for robust regression (outlier-resistant fitting)
+  - Residual plot analysis for model diagnostics
+- Evaluating performance — MSE, MAE, R²
+- Regularized methods — Ridge, Lasso, ElasticNet
+- Polynomial regression (adding polynomial terms via scikit-learn)
+  - Modeling nonlinear relationships in Ames Housing
 - Dealing with nonlinear relationships using random forests
   - Decision tree regression, random forest regression
 
@@ -3281,18 +3300,22 @@
 ### Chapter 13 — Going Deeper – The Mechanics of PyTorch
 - PyTorch's computation graphs
   - Understanding and creating computation graphs
-- PyTorch tensor objects for model parameters
+  - Dynamic vs static computation graphs
+- PyTorch tensor objects for storing and updating model parameters
 - Computing gradients via automatic differentiation
-  - Adversarial examples
+  - Reverse-mode autodiff (backprop)
+  - Adversarial examples via gradient computation
 - Simplifying architectures via torch.nn
-  - nn.Sequential, loss functions, XOR problem
+  - nn.Sequential — stacking layers
+  - Choosing loss functions
+  - Solving XOR classification problem
   - nn.Module for flexible model building
-  - Writing custom layers
-- Project 1 – predicting fuel efficiency of a car
+  - Writing custom layers (with Xavier initialization, L1 penalty)
+- Project 1 – predicting fuel efficiency (feature columns, DNN regression)
 - Project 2 – classifying MNIST handwritten digits
 - PyTorch Lightning introduction
-  - Setting up model, data loaders, Trainer
-  - Evaluating with TensorBoard
+  - Setting up model, data loaders, Trainer class
+  - Evaluating with TensorBoard (version tracking)
 
 ### Chapter 14 — Classifying Images with Deep Convolutional Neural Networks
 - Building blocks of CNNs
@@ -3312,15 +3335,23 @@
 
 ### Chapter 15 — Modeling Sequential Data Using Recurrent Neural Networks
 - Introducing sequential data
-  - Sequence modeling categories
+  - Sequential vs time series data
+  - Representing sequences, categories of sequence modeling
 - RNNs for modeling sequences
-  - Dataflow in RNNs, computing activations
+  - Dataflow in RNNs — two inputs per hidden unit (input + previous hidden state)
+  - Computing activations, unfolding recurrent edge
   - Hidden recurrence vs output recurrence
-  - Challenges of long-range interactions
-  - Long short-term memory (LSTM) cells
+  - Challenges of long-range interactions (vanishing gradient)
+  - Long short-term memory (LSTM) cells — gates mechanism
 - Implementing RNNs for sequence modeling in PyTorch
-  - Project 1 – IMDb sentiment analysis (embedding layers, RNN model)
+  - Project 1 – IMDb sentiment analysis
+    - Word embeddings (fixed-size real-valued vectors, not one-hot)
+    - Embedding layers for sentence encoding
+    - Building and training RNN model
   - Project 2 – character-level language modeling
+    - Preprocessing, dataset creation
+    - Building char-level RNN model
+    - Generating new text (evaluation phase)
 
 ### Chapter 16 — Transformers – Improving NLP with Attention Mechanisms
 - Adding attention mechanism to RNNs
@@ -3359,16 +3390,23 @@
 ### Chapter 18 — Graph Neural Networks for Capturing Dependencies in Graph Structured Data
 - Introduction to graph data
   - Undirected graphs, directed graphs, labeled graphs
-  - Representing molecules as graphs
+  - Representing molecules as graphs (nodes = atoms, edges = bonds)
 - Understanding graph convolutions
-  - Motivation and implementing basic graph convolutions
+  - Motivation: permutation-invariant aggregation over neighbors
+  - Implementing a basic graph convolution (message passing)
 - Implementing a GNN in PyTorch from scratch
   - NodeNetwork model
-  - Graph convolution layer, global pooling
-  - DataLoader and predictions
-- Implementing a GNN using PyTorch Geometric
+  - Graph convolution layer coding
+  - Global pooling layer (handles variable graph sizes)
+  - DataLoader for graph data, making predictions
+- Implementing a GNN using PyTorch Geometric library
 - Other GNN layers and recent developments
-  - Spectral graph convolutions, pooling, normalization
+  - Spectral graph convolutions (Laplacian-based)
+  - Pooling methods (DiffPool — clustering + downsampling)
+  - Normalization: GraphNorm, MsgNorm
+  - Graph transformers and attention mechanisms
+  - Graph variational autoencoders
+  - Pointers to advanced GNN literature
 
 ### Chapter 19 — Reinforcement Learning for Decision Making in Complex Environments
 - Introduction – learning from experience
